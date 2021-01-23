@@ -71,7 +71,7 @@ const getHashForBlock = (aBlock:Block):string => Block.calculateBlocKHash(aBlock
 
 const isBlockValid = (candidateBlock:Block, previousBlock:Block) :boolean =>{
     if(!Block.validateStructure(candidateBlock)){
-        return false
+        return false;
     }
     else if(previousBlock.index + 1 !== candidateBlock.index){
         return false;
